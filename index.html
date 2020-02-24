@@ -39,8 +39,8 @@
   <div id="app"></div>
   <script>
     window.$docsify = {
-      name: 'BITBOX Open API documentation',
-      repo: 'https://github.com/bitbox-exchange/bitbox-api-docs',
+      name: 'BITFRONT Open API documentation',
+      repo: 'https://github.com/bitfront-exchange/bitfront-api-docs',
       loadSidebar: true,
       subMaxLevel: 2,
       loadNavbar: true,
@@ -59,16 +59,6 @@
               currentpath.splice(0, 1) // remove the the first #
               arguments[0] = currentpath.join('/') + splits[splits.length-1]
             }
-
-            else if( window.location.href.includes('/ko/') && !arguments[0].endsWith('/') && !arguments[0].startsWith('#') && !arguments[0].startsWith('..') && !arguments[0].startsWith('http')) {
-              if( arguments[0].startsWith('/') ) {
-                arguments[0] = "/ko" + arguments[0]
-              } else {
-                arguments[0] = "/ko/" + arguments[0]
-              }
-              // return this.origin.link.apply(this, arguments);
-            }
-
             // return marked.link(href, title, text)
             return this.origin.link.apply(this, arguments);
            // return '<a href="#/' + href.replace('.md', '') + '">' + text + '</a>';
@@ -113,7 +103,7 @@
           });
         }
       ],
-      logo: 'images/bitbox_vertical.png'
+      logo: 'images/BITFRONT_logo.png'
     }
 
 
@@ -135,7 +125,7 @@
     return content;
   }
 </script>
-  <script src="//unpkg.com/docsify/lib/docsify.min.js" data-ga="UA-150918817-2"></script>
+  <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
   <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
   <script src="//unpkg.com/docsify/lib/plugins/search.min.js"></script>
   <!-- <script src="//unpkg.com/docsify/lib/plugins/zoom-image.min.js"></script> -->
@@ -145,7 +135,5 @@
   <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-http.min.js"></script>
   <!-- docsify-themeable (latest v0.x.x) -->
   <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0"></script>
-<!-- ga -->
-<script src="//unpkg.com/docsify/lib/plugins/ga.min.js"></script>
 </body>
 </html>
